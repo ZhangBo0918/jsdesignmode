@@ -35,16 +35,25 @@
 // makeSound(new Cat());
 //增加不同的动物时，必须对makeSound函数进行修改，makeSound函数会越来越臃肿
 //2.2 一段多态代码
-const makeSound = animal => {
-  animal.sound();
-};
-const Duck = function () {};
-const Cat = function () {};
-Duck.prototype.sound = () => {
-  console.log('嘎嘎嘎');
-};
-Cat.prototype.sound = () => {
-  console.log('喵喵喵');
-};
-makeSound(new Duck());
-makeSound(new Cat());
+// const makeSound = animal => {
+//   animal.sound();
+// };
+// const Duck = function () {};
+// const Cat = function () {};
+// Duck.prototype.sound = () => {
+//   console.log('嘎嘎嘎');
+// };
+// Cat.prototype.sound = () => {
+//   console.log('喵喵喵');
+// };
+// makeSound(new Duck());
+// makeSound(new Cat());
+//2.3proto与prototype，JavaScript的原型链
+// function Duck() {}
+// let duck = new Duck();
+// console.log(duck.__proto__ === Duck.prototype);
+// let duckPrototype = Duck.prototype;
+// while (duckPrototype !== null) {
+//   console.log(duckPrototype);
+//   duckPrototype = duckPrototype.__proto__;
+// }
